@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     let selectedDriver = document.getElementById("selectedDriver");
 
     f1Year.addEventListener("change", () => {
-        fetch(`http://ergast.com/api/f1/${f1Year.value}/drivers.json`)
+        fetch(`https://ergast.com/api/f1/${f1Year.value}/drivers.json`)
         .then(response => {
             if (response.ok) {
                 return response.json();
