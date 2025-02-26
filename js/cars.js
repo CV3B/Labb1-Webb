@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const url = "https://www.carqueryapi.com/api/0.3/?cmd=getModels&make=ford";
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
-    fetch(url)
+    fetch(proxyUrl + url)
     .then(response => response.json())
     .then(data => {
         console.log("Ford Models:", data);
