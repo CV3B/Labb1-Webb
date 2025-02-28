@@ -1,0 +1,26 @@
+.primaryColor {
+  background-color: #1f2e6e !important;
+}
+
+.secondaryColor {
+  background-color: #324ab0 !important;
+}
+
+.textColor {
+  color: #f3c250 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+p,
+a {
+  font-family: "Roboto", sans-serif;
+}

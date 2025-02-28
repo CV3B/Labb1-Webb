@@ -1,2 +1,9 @@
-p {
+.productImgFit {
+    height: 200px;
+    object-fit: contain;
+}
+
+.cardShadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }

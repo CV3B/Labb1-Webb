@@ -1,155 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formula 1 Shop - Home" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
     <title>Car Shop</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg sticky-top bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="../../logo.jpg" alt="Logo" width="70" height="70" class="d-inline-block align-text-center">
-                Car Shop
-            </a>
-            <!-- Navbar Toggler for Mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top primaryColor">
+      <div class="container-fluid">
+        <a class="navbar-brand textColor" href="index.html"> F1 Shop </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="drivers.html">Driver</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <div class="Container" >
-        <div class="row">
-            <div class="image-wrapper p-0">
-                <div class="Img-Overlay"></div>
-                <img class="LandingPage-Img" src="../bmwLandingPage.jpg" alt="Car Shop">
-                <h1 class="overlay-text">Welcome to Car Shop!</h1>
-                <button class="overlay-button btn btn-primary" >Look at the cars</button>
-            </div>
+    <div class="Container">
+      <div class="row">
+        <div class="image-wrapper p-0">
+          <div class="Img-Overlay"></div>
+          <img class="LandingPage-Img" src="../img/ferrariHomePage.webp" alt="Car Shop" />
+          <h1 class="overlay-text textColor">Welcome to Formula 1 Shop!</h1>
+          <button class="overlay-button btn primaryColor btn-lg w-25 textColor">
+            <a class="nav-link" href="products.html">Look at the products</a>
+          </button>
         </div>
+      </div>
 
-        <div class="row mt-4">
-            <div class="col p-0">
-                <div class="image-wrapper">
-                    <div class="Img-Overlay"></div>
-                    <img class="LandingPage-Img" src="../tire.jpg" />
-                 <button class="overlay-button btn btn-primary" >About us</button>
-                </div>
-            </div>
-            <div class="col p-0">
-                <div class="image-wrapper ">
-                    <div class="Img-Overlay"></div>
-                    <img class="LandingPage-Img" src="../ferrariLandingPage.jpg" />
-                    <button class="overlay-button btn btn-primary" >Button do</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <footer class="bg-body-tertiary text-center text-lg-start">
-        <div class="container p-4">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-      
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-body">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 4</a>
-                </li>
-              </ul>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
-      
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!" class="text-body">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 4</a>
-                </li>
-              </ul>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-      
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="text-body">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 4</a>
-                </li>
-              </ul>
-            </div>
-      
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
-      
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!" class="text-body">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-body">Link 4</a>
-                </li>
-              </ul>
-            </div>
+      <div class="secondaryColor text-white text-center">
+        <div class="row align-items-center justify-content-center m-0 p-4">
+          <div class="col-md-6 p-2 text-white">
+            <h1>More information</h1>
           </div>
         </div>
-      </footer>
+      </div>
 
+      <div class="row">
+        <div class="col p-0">
+          <div class="image-wrapper">
+            <div class="Img-Overlay"></div>
+            <img
+              class="LandingPage-Img"
+              src="../img/ferrariAbout.webp"
+              loading="lazy"
+              alt="aboutUs"
+            />
+            <button class="overlay-button btn primaryColor btn-lg textColor">
+              <a class="nav-link" href="about.html">About us</a>
+            </button>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div class="image-wrapper">
+            <div class="Img-Overlay"></div>
+            <img
+              class="LandingPage-Img"
+              src="../img/helemtDrivers.webp"
+              loading="lazy"
+              alt="DriverInfo"
+            />
+            <button
+              class="overlay-button btn btn primaryColor btn-lg textColor"
+            >
+              <a class="nav-link" href="drivers.html">Drivers information</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>

@@ -1,14 +1,26 @@
 const products = [
-  { brand: "Ferrari", model: "F40", price: 100000000, img: "/tire.jgp" },
+  { 
+    brand: "Ferrari", 
+    model: "SF-24", 
+    price: 1000000000, 
+    img: "../img/ferrari2024.webp" },
   {
-    brand: "Porsche",
-    model: "911",
-    price: 2000000,
-    img: "/polestarLandingPage.jpg",
+    brand: "Ferrai",
+    model: "F2004",
+    price: 20000000,
+    img: "../img/ferrari2004.webp",
   },
-  { brand: "Ferrari", model: "Roma", price: 1, img: "/kontakt.jpg" },
-  {brand: "Volov", model: "v90", price: 200000, img: "/ferrariLandingPage.jpg"},
-  
+  { 
+    brand: "Red Bull", 
+    model: "RB16", 
+    price: 400000,
+    img: "../img/redbull2020.webp" },
+  {
+    brand: "Mclaren",
+    model: "MCL60",
+    price: 20000,
+    img: "../img/mclaren2023.webp",
+  },
 ];
 
 let cart = [];
@@ -26,45 +38,42 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     const card = document.createElement("div");
 
-    card.className = "card m-4 p-0";
-    card.style = "width: 18rem; height: 355px; cursor: pointer;";
+    card.className = "card m-4 p-0 cardShadow";
+    card.style = "width: 18rem; height: 300px; cursor: pointer;";
 
     card.setAttribute("data-bs-toggle", "modal");
     card.setAttribute("data-bs-target", "#productModal");
 
     card.innerHTML = `
-            <img src="${product.img}" class="card-img-top" alt="${
-      product.model
-    }">
-            <div class="card-body">
+            <img src="${
+              product.img
+            }" class="card-img-top productImgFit " alt="${product.model}">
+            <div class="card-body d-flex flex-column">
                 <h5 class="card-title">${product.brand} ${product.model}</h5>
-                <p class="card-text">$${product.price.toLocaleString()}</p>
+                <p class="card-text mt-auto">$${product.price.toLocaleString()}</p>
             </div>`;
 
-    cardContainer.appendChild(card)
+    cardContainer.appendChild(card);
     productList.appendChild(cardContainer);
 
     card.addEventListener("click", () => {
-      selectedProduct = product; 
+      selectedProduct = product;
 
       let modalTitle = document.getElementById("modalTitle");
       let productImg = document.getElementById("productImg");
       let productInfo = document.getElementById("productInfo");
 
       modalTitle.textContent = `${product.brand} ${product.model}`;
-      productImg.innerHTML = `<img src="${product.img}" width="200" height="200" alt="${product.brand} ${product.model}"/>`;
+      productImg.innerHTML = `<img src="${product.img}" class="img-fluid rounded m-auto d-block" width="200" height="200" alt="${product.brand} ${product.model}"/>`;
       productInfo.innerHTML = `
                 <p><strong>Brand:</strong> ${product.brand}</p>
                 <p><strong>Model:</strong> ${product.model}</p>
                 <p><strong>Price:</strong> $${product.price.toLocaleString()}</p>`;
-      
     });
-
-
   }
-  
+
   addToCartBtn.addEventListener("click", () => {
-    let isProductInCart = cart.find(p => p.model == selectedProduct.model);
+    let isProductInCart = cart.find((p) => p.model == selectedProduct.model);
 
     if (isProductInCart) {
       selectedProduct.quantity += 1;
@@ -81,15 +90,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     cartInfo.innerHTML = "";
 
-    if(cart.length == 0) {
+    if (cart.length == 0) {
       cartInfo.textContent = "Cart is empty!";
       return;
     }
 
     for (const item of cart) {
       let cartItem = document.createElement("li");
-      cartItem.className = "list-group-item d-flex justify-content-between align-items-center";
-      cartItem.textContent = `${item.brand} ${item.model} - $${item.price.toLocaleString()}`;
+      cartItem.className =
+        "list-group-item d-flex justify-content-between align-items-center";
+      cartItem.textContent = `${item.brand} ${
+        item.model
+      } - $${item.price.toLocaleString()}`;
 
       let quantityContainer = document.createElement("div");
       quantityContainer.className = "d-flex align-items-center";
@@ -104,7 +116,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       cartQuantityAdd.addEventListener("click", () => {
         item.quantity += 1;
         cartQuantity.textContent = item.quantity;
-      })
+      });
 
       let cartQuantityRemove = document.createElement("button");
       cartQuantityRemove.className = "btn ";
@@ -112,14 +124,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
       cartQuantityRemove.addEventListener("click", () => {
         item.quantity -= 1;
 
-        if(item.quantity <= 0) {
-          console.log(cart.filter(i => i.model !== item.model));
-          cart = cart.filter(i => i.model !== item.model);
+        if (item.quantity <= 0) {
+          console.log(cart.filter((i) => i.model !== item.model));
+          cart = cart.filter((i) => i.model !== item.model);
           cartItem.innerHTML = "";
-        };
+        }
 
         cartQuantity.textContent = item.quantity;
-      })
+      });
 
       quantityContainer.appendChild(cartQuantityRemove);
       quantityContainer.appendChild(cartQuantity);
@@ -131,15 +143,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
 
     cartInfo.appendChild(cartList);
-  })
-
-  
+  });
 });
-
-
-// const myModal = document.getElementById("myModal");
-// const myInput = document.getElementById("myInput");
-
-// myModal.addEventListener("shown.bs.modal", () => {
-//   myInput.focus();
-// });
