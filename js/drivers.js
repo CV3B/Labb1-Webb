@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
       .then((data) => {
         let drivers = data.MRData.DriverTable.Drivers;
 
+        selectedDriver.innerHTML = "";
+
         drivers.forEach((driver) => {
           let option = document.createElement("option");
           option.value = driver.driverId;
