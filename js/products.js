@@ -5,7 +5,7 @@ const products = [
     price: 1000000000, 
     img: "../img/ferrari2024.webp" },
   {
-    brand: "Ferrai",
+    brand: "Ferrari",
     model: "F2004",
     price: 20000000,
     img: "../img/ferrari2004.webp",

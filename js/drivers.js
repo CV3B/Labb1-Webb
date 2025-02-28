@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       .catch((error) => console.error("Fel vid anrop:", error));
   });
 
-  selectedDriver.addEventListener("click", () => {
+  selectedDriver.addEventListener("change", () => {
     fetch(
       `https://ergast.com/api/f1/${f1Year.value}/drivers/${selectedDriver.value}/results.json`
     )
